@@ -471,13 +471,23 @@ function Course({ course, currentDate }) {
 }
 
 export async function getServerSideProps({ params }) {
-  const course = await getCourse(params.id)
-  const currentDate = new Date().toISOString()
-  return {
-    props: {
-      course,
-      currentDate,
-    },
+  try {
+    const course = await getCourse(params.id)
+    const currentDate = new Date().toISOString()
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify(course)),
+        currentDate,
+      },
+    }
+  } catch (error) {
+    console.error('Error in getServerSideProps (courses/[id].js):', error)
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify({ id: params.id })),
+        currentDate: new Date().toISOString(),
+      },
+    }
   }
 }
 

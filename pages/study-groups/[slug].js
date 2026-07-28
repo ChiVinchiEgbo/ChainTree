@@ -171,13 +171,23 @@ function StudyGroup({ studyGroup }) {
 }
 
 export async function getServerSideProps({ params }) {
-  const studyGroup = await getStudyGroup(params.slug)
-  const currentDate = new Date().toISOString()
-  return {
-    props: {
-      studyGroup,
-      currentDate,
-    },
+  try {
+    const studyGroup = await getStudyGroup(params.slug)
+    const currentDate = new Date().toISOString()
+    return {
+      props: {
+        studyGroup: JSON.parse(JSON.stringify(studyGroup || {})),
+        currentDate,
+      },
+    }
+  } catch (error) {
+    console.error('Error in getServerSideProps (study-groups/[slug].js):', error)
+    return {
+      props: {
+        studyGroup: {},
+        currentDate: new Date().toISOString(),
+      },
+    }
   }
 }
 

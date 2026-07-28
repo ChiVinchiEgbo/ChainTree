@@ -35,9 +35,19 @@ export default function Home({ course }) {
 }
 
 export async function getServerSideProps() {
-  return {
-    props: {
-      course: await getHomeCourse(),
-    },
+  try {
+    const course = await getHomeCourse()
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify(course || defaultCourse)),
+      },
+    }
+  } catch (error) {
+    console.error('Error in getServerSideProps (index.js):', error)
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify(defaultCourse)),
+      },
+    }
   }
 }

@@ -334,20 +334,33 @@ function Lessons({ course, section, lesson, content, currentDate }) {
 }
 
 export async function getServerSideProps({ params, query }) {
-  const { lang } = query
-  const course = await getCourse(params.id, lang)
-  const content = await getPage(params.id, params.section, params.lesson, lang)
-  const currentDate = new Date().toISOString()
-  const lesson = params.lesson
-  const section = params.section
-  return {
-    props: {
-      course,
-      section,
-      lesson,
-      content,
-      currentDate,
-    },
+  try {
+    const { lang } = query
+    const course = await getCourse(params.id, lang)
+    const content = await getPage(params.id, params.section, params.lesson, lang)
+    const currentDate = new Date().toISOString()
+    const lesson = params.lesson
+    const section = params.section
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify(course)),
+        section,
+        lesson,
+        content: content || '',
+        currentDate,
+      },
+    }
+  } catch (error) {
+    console.error('Error in getServerSideProps (courses/[id]/[section]/[lesson].js):', error)
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify({ id: params.id })),
+        section: params.section,
+        lesson: params.lesson,
+        content: '',
+        currentDate: new Date().toISOString(),
+      },
+    }
   }
 }
 

@@ -61,12 +61,21 @@ function Course({ course }) {
 }
 
 export async function getServerSideProps({ params }) {
+  try {
     const course = await getCourse(params.id)
     return {
-        props: {
-            course
-        },
+      props: {
+        course: JSON.parse(JSON.stringify(course)),
+      },
     }
+  } catch (error) {
+    console.error('Error in getServerSideProps (study-groups/details/[id].js):', error)
+    return {
+      props: {
+        course: JSON.parse(JSON.stringify({ id: params.id })),
+      },
+    }
+  }
 }
 
 export default Course

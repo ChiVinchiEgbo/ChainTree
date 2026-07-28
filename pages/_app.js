@@ -3,7 +3,6 @@ import '../styles/globals.css'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
-import mixpanel from 'mixpanel-browser'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { createTheme, NextUIProvider } from '@nextui-org/react'
 import { SSRProvider } from '@react-aria/ssr'
@@ -19,10 +18,13 @@ import NavbarComponent from '../components/Navbar'
 import Footer from '../components/Footer'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { mixpanel } from '../lib/utils/mixpanel'
 import '../i18n'
 
 export const event = (event_name, props) => {
-  mixpanel.track(event_name, props)
+  if (typeof window !== 'undefined' && mixpanel && typeof mixpanel.track === 'function') {
+    mixpanel.track(event_name, props)
+  }
 }
 
 function MyApp({ Component, pageProps }) {
