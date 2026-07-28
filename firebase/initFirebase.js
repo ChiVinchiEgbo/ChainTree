@@ -34,7 +34,7 @@ if (process.env.NODE_ENV === 'test') {
 // Initialize Firebase
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp()
 const auth = getAuth(app)
-const db = getFirestore()
+const db = getFirestore(app)
 const storage = getStorage(app)
 
 async function startEmulators() {
