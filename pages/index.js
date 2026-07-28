@@ -17,6 +17,8 @@ export default function Home({ course }) {
     t('home.cards.4'),
   ]
 
+  const safeCourse = course || defaultCourse
+
   return (
     <>
       <SEOHead
@@ -24,30 +26,32 @@ export default function Home({ course }) {
         description="Join ChainTree bootcamp to learn Solana, Rust, Anchor smart contracts, and Web3 technologies. Free courses with on-chain NFT certificates. Start your Web3 journey today!"
         canonical="/"
         keywords={['web3', 'solana', 'blockchain', 'bootcamp', 'smart contracts', 'NFT', 'Anchor', 'Rust', 'DeFi', 'chaintree']}
-        ogImage={course?.image_url || 'https://build.w3d.community/og/og-home.png'}
+        ogImage={safeCourse?.image_url || 'https://build.w3d.community/og/og-home.png'}
         ogImageAlt="ChainTree Bootcamp - Web3 and Solana Blockchain Courses"
         jsonLd={buildOrganizationSchema()}
       />
-      <Main course={course} />
+      <Main course={safeCourse} />
       <HomeCards cards={cards} />
     </>
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const course = await getHomeCourse()
     return {
       props: {
         course: JSON.parse(JSON.stringify(course || defaultCourse)),
       },
+      revalidate: 60,
     }
   } catch (error) {
-    console.error('Error in getServerSideProps (index.js):', error)
+    console.error('Error in getStaticProps (index.js):', error)
     return {
       props: {
         course: JSON.parse(JSON.stringify(defaultCourse)),
       },
+      revalidate: 60,
     }
   }
 }
