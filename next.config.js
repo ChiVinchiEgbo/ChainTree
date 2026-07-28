@@ -13,7 +13,7 @@ module.exports = {
     ],
   },
   experimental: {
-    esmExternals: 'loose',
+    esmExternals: false,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
