@@ -9,7 +9,7 @@ if (process.env.NODE_ENV === 'test') {
   firebaseConfig = {
     apiKey: 'dummy_api_key',
     authDomain: 'dummy_auth_domain',
-    projectId: 'chaintree-development',
+    projectId: 'chaintree-d915a',
     storageBucket: 'dummy_storage_bucket',
     messagingSenderId: 'dummy_sender_id',
     appId: 'dummy_app_id',
@@ -17,13 +17,13 @@ if (process.env.NODE_ENV === 'test') {
   }
 } else {
   firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || 'dummy_api_key',
-    authDomain: (process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'chaintree-development') + '.firebaseapp.com',
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'chaintree-development',
-    storageBucket: (process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'chaintree-development') + '.appspot.com',
-    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_SENDER_ID || 'dummy_sender_id',
-    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || 'dummy_app_id',
-    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || 'dummy_measurement_id',
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || 'AIzaSyBg4NmcU5gkm41OPwGQpAsis_063ZwU5G8',
+    authDomain: (process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'chaintree-d915a') + '.firebaseapp.com',
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'chaintree-d915a',
+    storageBucket: (process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || 'chaintree-d915a') + '.appspot.com',
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_SENDER_ID || '4723827185',
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || '1:4723827185:web:99b8f4de2634df6c506450',
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || 'G-36V38HX81K',
   }
 }
 
