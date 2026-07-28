@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdownRaw from 'react-markdown'
 import { Button, Text } from '@nextui-org/react'
 import Modal from '../../../../components/Modal'
 import { withProtected } from '../../../../hooks/route'
@@ -10,15 +10,20 @@ import Tabs from '../../../../components/Tabs'
 import { getAllCohorts, getCurrentCohort } from '../../../../lib/cohorts'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
-import rehypeRaw from 'rehype-raw'
-import rehypePrism from 'rehype-prism-plus'
-import remarkGfm from 'remark-gfm'
+import rehypeRawRaw from 'rehype-raw'
+import rehypePrismRaw from 'rehype-prism-plus'
+import remarkGfmRaw from 'remark-gfm'
 import TwitterModal from '../../../../components/TwitterModal.js'
 import { getUserFromFirestore } from '../../../../lib/user'
 import { auth } from '../../../../firebase/initFirebase'
 import { MdAdsClick } from 'react-icons/md'
 import { Container } from '@nextui-org/react'
 import { useTranslation } from 'react-i18next'
+
+const ReactMarkdown = ReactMarkdownRaw?.default || ReactMarkdownRaw
+const rehypeRaw = rehypeRawRaw?.default || rehypeRawRaw
+const rehypePrism = rehypePrismRaw?.default || rehypePrismRaw
+const remarkGfm = remarkGfmRaw?.default || remarkGfmRaw
 
 function Lessons({ course, section, lesson, content, currentDate }) {
   const [open, setOpen] = useState(false)
