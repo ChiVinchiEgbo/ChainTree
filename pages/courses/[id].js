@@ -470,23 +470,34 @@ function Course({ course, currentDate }) {
   )
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { id: 'Solidity_And_Smart_Contracts' } },
+    ],
+    fallback: 'blocking',
+  }
+}
+
+export async function getStaticProps({ params }) {
   try {
     const course = await getCourse(params.id)
     const currentDate = new Date().toISOString()
     return {
       props: {
-        course: JSON.parse(JSON.stringify(course)),
+        course: JSON.parse(JSON.stringify(course || { id: params.id, ...defaultCourse })),
         currentDate,
       },
+      revalidate: 60,
     }
   } catch (error) {
-    console.error('Error in getServerSideProps (courses/[id].js):', error)
+    console.error('Error in getStaticProps (courses/[id].js):', error)
     return {
       props: {
-        course: JSON.parse(JSON.stringify({ id: params.id })),
+        course: JSON.parse(JSON.stringify({ id: params.id, ...defaultCourse })),
         currentDate: new Date().toISOString(),
       },
+      revalidate: 60,
     }
   }
 }

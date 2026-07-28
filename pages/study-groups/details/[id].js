@@ -1,4 +1,4 @@
-import { getCourse } from '../../../lib/course'
+import { getCourse, defaultCourse } from '../../../lib/course'
 import React from 'react'
 import NotFound from '../../404'
 import { Text,Button } from '@nextui-org/react'
@@ -60,20 +60,31 @@ function Course({ course }) {
     )
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { id: 'Solidity_And_Smart_Contracts' } },
+    ],
+    fallback: 'blocking',
+  }
+}
+
+export async function getStaticProps({ params }) {
   try {
     const course = await getCourse(params.id)
     return {
       props: {
-        course: JSON.parse(JSON.stringify(course)),
+        course: JSON.parse(JSON.stringify(course || { id: params.id, ...defaultCourse })),
       },
+      revalidate: 60,
     }
   } catch (error) {
-    console.error('Error in getServerSideProps (study-groups/details/[id].js):', error)
+    console.error('Error in getStaticProps (study-groups/details/[id].js):', error)
     return {
       props: {
-        course: JSON.parse(JSON.stringify({ id: params.id })),
+        course: JSON.parse(JSON.stringify({ id: params.id, ...defaultCourse })),
       },
+      revalidate: 60,
     }
   }
 }
