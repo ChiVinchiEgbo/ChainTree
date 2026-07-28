@@ -1,7 +1,7 @@
-const { initializeApp, getApps, getApp } = require('firebase/app')
-const { getAuth, connectAuthEmulator } = require('firebase/auth')
-const { getFirestore, connectFirestoreEmulator } = require('firebase/firestore')
-const { getStorage, connectStorageEmulator } = require('firebase/storage')
+import { initializeApp, getApps, getApp } from 'firebase/app'
+import { getAuth, connectAuthEmulator } from 'firebase/auth'
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
+import { getStorage, connectStorageEmulator } from 'firebase/storage'
 
 let firebaseConfig
 
@@ -51,4 +51,4 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
   startEmulators().catch(console.error)
 }
 
-module.exports = { auth, app, db, storage }
+export { auth, app, db, storage }
