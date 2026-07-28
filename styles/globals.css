@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a:visited {
+  color: 'inherit';
+}
+
+blockquote {
+  background-color: white;
+}
+
+code {
+  background: #808080;
+  color: white;
+  font-family: monospace;
+}
+
+pre {
+  background-color: #3b3b3b;
+  color: white;
+  padding: 2rem;
+}
+
+.code-line {
+  color: white;
+}
+
+.code-highlight {
+  background-color: transparent;
+}
+
+.container-lessons a {
+  color: inherit;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 18px;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #010101;
+  color: #D8D8D8;
+}
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.lp-gradient-text {
+  background: linear-gradient(135deg, #56F569 0%, #D8D8D8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.react-markdown img {
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+.builtin {
+  color: #A3A9A4;
+}
+.keyword {
+  color: #56F569;
+}
+.punctuation {
+  color: #56F569;
+}
+.tag {
+  color: #56F569;
+}
+.property-access {
+  color: #A3A9A4;
+}
+.class-name {
+  color: #56F569;
+}
+.operator {
+  color: #56F569;
+}
+.code-line {
+  white-space: break-spaces;
+  word-break: break-all;
+}
+.comment {
+  color: #606060;
+}
+.function {
+  color: #56F569;
+}
+pre {
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: #080808;
+  border: 1px solid #606060;
+  color: #D8D8D8;
+  word-break: break-all;
+}
+
+._1udoG {
+  z-index: 10;
+}
+
+.icon {
+  transition: filter 0.3s ease;
+}
+
+.light-icon {
+  filter: brightness(0) saturate(100%);
+}
+
+.dark-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+.search-bar {
+  border: 1px solid #56F569;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  outline: none;
+  width: 100%;
+  background: #010101;
+  color: #D8D8D8;
+  opacity: 90%;
+}
+
+.search-bar:focus {
+  border-color: #56F569;
+  box-shadow: 0 0 10px #56F569;
+}
+
+.icon {
+  transition: fill 0.3s ease;
+}
+
+.light-mode .icon {
+  filter: invert(0%);
+}
+
+.dark-mode .icon {
+  filter: invert(100%);
+}

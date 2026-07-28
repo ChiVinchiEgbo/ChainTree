@@ -1,0 +1,51 @@
+[{
+  "courseName": "Trading_Bots",
+  "scheduled_at": "",
+  "leader_discord_id": "",
+  "discord_channel_id":"",
+  "active": true,
+  "description": "Trading Bots Study Groups",
+  "difficulty": "Intermediate",
+  "image_url": "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/groups_cover%2F7.png?alt=media&token=2844ce01-d55f-434b-83e3-46a46f17b458",
+  "index": 1,
+  "nft_title": "Trading Bots",
+  "repository_language": "pt",
+  "resized_img_url": "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/groups_cover%2F7.png?alt=media&token=2844ce01-d55f-434b-83e3-46a46f17b458",
+  "tags": [],
+  "title": "Trading Bots",
+  "analytics": [
+    {
+        "photoUrls": [
+            "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/users%2F4WZwLIcYGvNH4c3cI4E65akjlPD3%2FprofilePic?alt=media&token=860881a4-78e2-4b3e-962a-6e0496f54e5c"
+        ],
+        "students": 2
+    }
+]
+},
+{
+  "courseName": "Defi",
+  "active": true,
+  "description": "Defi Study Group",
+  "difficulty": "Intermediate",
+  "image_url": "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/groups_cover%2F6.png?alt=media&token=10283890-774d-4dad-89cd-f15a485e93ad",
+  "index": 1,
+  "nft_title": "Defi",
+  "repository_language": "pt",
+  "resized_img_url": "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/groups_cover%2F6.png?alt=media&token=10283890-774d-4dad-89cd-f15a485e93ad",
+  "tags": [],
+  "title": "Defi"
+},
+{
+  "courseName": "DAO",
+  "active": true,
+  "description": "DAO's Study Group",
+  "difficulty": "Intermediate",
+  "image_url": "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/groups_cover%2F13.png?alt=media&token=edf5af6b-4e12-4bf5-b0d9-ea9aeacade47",
+  "index": 1,
+  "nft_title": "DAO",
+  "repository_language": "pt",
+  "resized_img_url": "https://firebasestorage.googleapis.com/v0/b/chaintree-development.appspot.com/o/groups_cover%2F13.png?alt=media&token=edf5af6b-4e12-4bf5-b0d9-ea9aeacade47",
+  "tags": [],
+  "title": "DAO"
+}
+]

@@ -1,0 +1,180 @@
+{
+  "pageTitle": "Builds List",
+  "createFirstProject": "Create Your First Web3 Project",
+  "indicateAndWin": "Refer and Earn",
+  "profilePicture": "Profile picture",
+  "logout": "Logout",
+  "myProfile": "My profile",
+  "connected": "Connected",
+  "close": "Close",
+  "shareLinkDescription": "Share this link with your friends and compete for prizes from ChainTree",
+  "accessPlatform": "Access Platform",
+  "registrationClosed": "Registrations are closed, please wait for the next class to open to register!",
+  "registrationDone": "Registration done! The launch date will be announced on our",
+  "joinDiscord": "Feel free to join now!",
+  "signUpNow": "Sign up now",
+  "liveEvent": "Live event",
+  "liveEventDescription": "At the launch of each project, there will be an AWESOME LIVE! Add it to your calendar so you don't forget. See you there!",
+  "addToCalendar": "Add to calendar",
+  "addToGoogleCalendar": "Add to Google Calendar",
+  "section": "Section",
+  "launchDateAnnouncement": "The launch date will be announced on our",
+  "connectYourDiscord": "❌ Connect your Discord",
+  "accessSuperSecretChannels": "Get access to super secret channels 🤫",
+  "connectDiscordButton": "Connect Discord",
+  "eagerToMeet": "We're eager to meet you! Make sure to interact, post your questions, and share your progress.",
+  "reconnectDiscordButton": "Reconnect Discord",
+  "connectYourETHWallet": "❌ Connect your Solana wallet",
+  "earnCompletionNFTs": "You will earn completion NFTs! Plus, you will need a wallet to work with the project material.",
+  "connectWalletButton": "Connect wallet",
+  "walletConnected": "✅ Wallet Connected",
+  "walletAddress": "Wallet address: ",
+  "walletConnectedSuccess": "Successfully connected!",
+  "installMetamask": "Please install a Solana wallet (e.g. Phantom or Solflare)",
+  "walletDisconnectedSuccess": "Successfully disconnected!",
+  "learnWithFriends": "💓 Learn with your friends!",
+  "shareReferralMessage": "Share your personalized link with your friends, so they can join the same class as you.",
+  "shareButton": "Share",
+  "copyLinkButton": "Copy Link",
+  "linkCopiedToast": "Link copied",
+  "disconnectWallet": "Disconnect wallet",
+  "forum": "Forum",
+  "manual": "Manual",
+  "glossary": "Glossary",
+  "developedBy": "Developed with 💚 by",
+  "inspiredBy": "and inspired by",
+  "send": "Send",
+  "subscribeNow": "Subscribe now",
+  "cancel": "Cancel",
+  "share": "Share",
+  "courses": {
+    "startNow": "Start Now"
+  },
+  "sectionTabs": {
+    "peopleBuilding": "people building in this section"
+  },
+  "lesson": {
+    "previousLesson": "Previous Lesson",
+    "backToCourse": "Back to Course",
+    "nextLesson": "Next Lesson",
+    "lessonSent": "Lesson sent",
+    "clickToSendReport": "Click the button above to send your #progress report"
+  },
+  "profile": {
+    "generalInfo": "General Info",
+    "name": "Name",
+    "whereAreYou": "Where are you?",
+    "socialNetworks": "Social Networks",
+    "personalWebsite": "Personal Website",
+    "yearXP": "Insert the year you started to work as a developer",
+    "yearBlockchainXP": "Insert the year you started to work with blockchain",
+    "changeProfilePicture": "Change profile picture"
+  },
+  "home": {
+    "cards": [
+      "100% FREE, always!",
+      "Learn Different Programming Languages",
+      "Project Based Learning",
+      "Earn an NFT for each finished project",
+      "Find a job in cool web3 projects"
+    ],
+    "description": "ChainTree is a platform for learning web3 technologies through project-based learning. We believe that the best way to learn is by doing, so we created a platform where you can learn by building real projects. We are a community of developers, designers, and blockchain enthusiasts who are passionate about learning and sharing knowledge. Join us and start building today!"
+  },
+  "comming_soon": {
+    "timeHasCome": "The time has come!",
+    "preparingEvent": "We are finalizing the last preparations for the event. Check back soon!"
+  },
+  "studyGroup": {
+    "addToCalendar": "Add to calendar so you don't forget. See you there!",
+    "enterGroup": "Subscribe to the group",
+    "title": "Study Groups",
+    "description1": "Designed to cater to developers of all skill levels, our study groups provide a collaborative environment where you can dive deep into various Web3 topics, including blockchain, decentralized finance, smart contract security, and more. Guided by industry experts, each session offers hands-on experience and practical knowledge, ensuring you can apply what you learn in real-world scenarios.",
+    "description2": "Our mission is to make Web3 accessible to everyone, regardless of location or language preference. By joining our study groups, you’ll connect with like-minded peers, participate in engaging projects, and become part of a thriving community dedicated to innovation and growth in the Web3 space. Explore our schedule and start your journey towards becoming a Web3 expert today!,"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": {
+      "typeError": "Email needs to be filled out",
+      "invalid": "Invalid email",
+      "required": "Email is required"
+    },
+    "url": {
+      "invalid": "Invalid URL"
+    },
+    "number": {
+      "integer": "Only integers are allowed",
+      "max": "We haven't invented the time machine yet, haha"
+    },
+    "devExp": {
+      "min": "Were you programming on punch cards? The minimum is 1982 :)"
+    },
+    "blockchainExp": {
+      "min": "Satoshi, is that you? The minimum is 2008 :)"
+    }
+  },
+  "messages": {
+    "registration_success": "Registered successfully!",
+    "email_in_use": "This email is already in use!",
+    "something_wrong_try_again": "Something went wrong, try again!",
+    "login_success": "You logged in successfully!",
+    "invalid_credentials_try_again": "Invalid credentials, try again.",
+    "something_wrong_happened": "Something went wrong.",
+    "logout_success": "You logged out!",
+    "lesson_no_response": "You cannot submit the lesson without a response :)",
+    "file_needed": "You need to select a file to upload",
+    "email_sent_success": "Email sent successfully",
+    "email_not_found": "Email not found",
+    "lesson_completed_congrats": "You finished, congratulations!",
+    "exercise_not_submitted": "You have not submitted the exercise for this lesson yet",
+    "already_on_first_lesson": "You are already on the first lesson.",
+    "data_updated_success": "Data updated successfully!",
+    "error_updating_data": "Error updating data",
+    "language_not_available": "Content not available for the selected language. Using the default language.",
+    "course_registration_success": "Successfully registered for the course!",
+    "login_cancelled": "Login cancelled"
+  },
+  "twitter-share": "Networking is everything, how about sharing your progress with your friends on Twitter?",
+  "buttons": {
+    "study_groups": "Study Groups",
+    "no": "No",
+    "yes": "Yes",
+    "reset_password": "Reset your password",
+    "sign_in": "Sign in to your account",
+    "register_now": "Register now!",
+    "forgot_password": "Forgot my password",
+    "log_in": "Log in",
+    "recover_password": "Recover password",
+    "login_with_github": "Login with GitHub",
+    "login_with_google": "Login with Google",
+    "register": "Register"
+  },
+  "form": {
+    "no_account": "Don't have an account?",
+    "enter_name": "Please enter your name",
+    "name": "Full Name",
+    "enter_email": "Please enter your email",
+    "invalid_email": "Invalid email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "password_mismatch": "Passwords do not match",
+    "enter_password": "Please enter your password",
+    "verify_password": "Verify your password",
+    "or": "OR",
+    "already_have_account": "Already have an account?"
+  },
+  "link_github_account": "Do you want to link GitHub to your already registered account?",
+  "peopleBuilding": "people building in this section",
+  "createStudyGroup": "Create Study Group",
+  "title": "Title",
+  "description": "Description",
+  "difficulty": "Difficulty",
+  "beginner": "Beginner",
+  "intermediate": "Intermediate",
+  "advanced": "Advanced",
+  "language": "Language",
+  "scheduledAt": "Scheduled At",
+  "leaderDiscordId": "Leader Discord ID",
+  "imageUrl": "Image URL",
+  "index": "Index",
+  "searchBuild": "Search by title"
+}

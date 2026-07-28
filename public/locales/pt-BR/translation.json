@@ -1,0 +1,179 @@
+{
+  "title": "Title",
+  "createFirstProject": "Crie seu Primeiro Projeto Web3",
+  "indicateAndWin": "Indique e Ganhe",
+  "profilePicture": "Foto de perfil",
+  "logout": "Sair",
+  "myProfile": "Meu perfil",
+  "connected": "Conectado",
+  "close": "Fechar",
+  "shareLinkDescription": "Compartilhe esse link com seus amigos e concorra a prêmios da ChainTree",
+  "accessPlatform": "Acessar Plataforma",
+  "registrationClosed": "As inscrições estão encerradas, aguarde a próxima turma abrir para se inscrever!",
+  "registrationDone": "Inscrição feita! A data de lançamento será anunciada no nosso",
+  "joinDiscord": "Aproveita para já entrar lá!",
+  "signUpNow": "Inscreva-se agora",
+  "liveEvent": "Evento ao vivo",
+  "liveEventDescription": "No lançamento de cada projeto, ocorrerá uma LIVE MASSA! Adicione no seu calendário para não esquecer. Nos veremos lá!",
+  "addToCalendar": "Adicionar ao calendário",
+  "addToGoogleCalendar": "Adicionar ao calendário Google",
+  "section": "Seção",
+  "launchDateAnnouncement": "A data de lançamento será anunciada no nosso",
+  "connectYourDiscord": "❌ Conecte seu Discord",
+  "accessSuperSecretChannels": "Tenha acesso aos canais supersecretos 🤫",
+  "connectDiscordButton": "Conectar Discord",
+  "eagerToMeet": "Estamos ansiosos para te conhecer! Não deixe de interagir, postar suas dúvidas e compartilhar o seu progresso.",
+  "reconnectDiscordButton": "Reconectar Discord",
+  "connectYourETHWallet": "❌ Conecte sua carteira Solana",
+  "earnCompletionNFTs": "Você receberá NFTs de conclusão! Além disso, precisará de uma carteira para trabalhar com o material do projeto.",
+  "connectWalletButton": "Conectar carteira",
+  "walletConnected": "✅ Carteira Conectada",
+  "walletAddress": "Endereço da carteira: ",
+  "walletConnectedSuccess": "Conectado com sucesso!",
+  "installMetamask": "Por favor instale uma carteira Solana (ex. Phantom ou Solflare)",
+  "walletDisconnectedSuccess": "Desconectado com sucesso!",
+  "learnWithFriends": "💓 Aprenda com seus amigos!",
+  "shareReferralMessage": "Divulgue seu link personalizado para seus amigos, assim eles entrarão na mesma turma que você.",
+  "shareButton": "Compartilhar",
+  "copyLinkButton": "Copiar Link",
+  "linkCopiedToast": "Link copiado",
+  "disconnectWallet": "Desconectar carteira",
+  "forum": "Fórum",
+  "manual": "Manual",
+  "glossary": "Glossário",
+  "developedBy": "Desenvolvido com 💚 pela",
+  "inspiredBy": "e inspirado pela",
+  "send": "Enviar",
+  "subscribeNow": "Quero me inscrever",
+  "cancel": "Cancelar",
+  "share": "Compartilhar",
+  "courses": {
+    "startNow": "Começar agora"
+  },
+  "sectionTabs": {
+    "peopleBuilding": "pessoas construindo nessa seção"
+  },
+  "lesson": {
+    "previousLesson": "Lição Anterior",
+    "backToCourse": "Voltar ao Curso",
+    "nextLesson": "Próxima Lição",
+    "lessonSent": "Lição enviada",
+    "clickToSendReport": "Clique no botão acima para enviar o seu relatório de #progresso"
+  },
+  "profile": {
+    "generalInfo": "Informações Gerais",
+    "name": "Nome",
+    "whereAreYou": "Onde você está?",
+    "socialNetworks": "Redes Sociais",
+    "personalWebsite": "Site Pessoal",
+    "yearXP": "Insira o ano de início da sua experiência profissional com desenvolvimento",
+    "yearBlockchainXP": "Insira o ano de início da sua experiência profissional com blockchain",
+    "changeProfilePicture": "Alterar foto de perfil"
+  },
+  "home": {
+    "cards": [
+      "100% gratuito, sempre!",
+      "Desenvolva em diferentes linguages",
+      "Aprendizado baseado em projetos",
+      "Ganhe um NFT para cada projeto finalizado",
+      "Trabalhe como dev em projetos web3"
+    ],
+    "description": "Está em busca de conteúdo gratuito e em português para aprender a programar na web3? Aqui você encontrará uma comunidade grande e engajada, centenas de artigos, vídeos e todo o suporte necessário para evoluir. E como extra ainda ganhará certificações em NFT para compartilhar com os amigos. Venha conhecer e se inscreva já!"
+  },
+  "comming_soon": {
+    "timeHasCome": "Está chegando a hora!",
+    "preparingEvent": "Estamos finalizando os últimos preparativos para o evento. Volte para conferir em breve!"
+  },
+  "studyGroup": {
+    "addToCalendar": "Adicione no seu calendário para não esquecer. Nos veremos lá!",
+    "enterGroup": "Entrar no grupo",
+    "title": "Grupos de Estudo",
+    "description1": "Projetados para atender a desenvolvedores de todos os níveis, nossos grupos de estudo oferecem um ambiente colaborativo onde você pode explorar diversos tópicos de Web3, incluindo blockchain, finanças descentralizadas, segurança de contratos inteligentes e muito mais. Orientados por especialistas da indústria, cada sessão oferece experiência prática e conhecimento aplicável, garantindo que você possa usar o que aprende em cenários do mundo real.",
+    "description2": "Nossa missão é tornar o Web3 acessível a todos, independentemente da localização ou da preferência de idioma. Ao se juntar aos nossos grupos de estudo, você conectará com colegas interessados, participará de projetos envolventes e se tornará parte de uma comunidade vibrante, dedicada à inovação e ao crescimento no espaço Web3. Explore nossa programação e comece sua jornada para se tornar um especialista em Web3 hoje mesmo"
+  },
+  "validation": {
+    "required": "Este campo é obrigatório",
+    "email": {
+      "typeError": "Email precisa ser preenchido",
+      "invalid": "Email inválido",
+      "required": "Email é obrigatório"
+    },
+    "url": {
+      "invalid": "URL inválida"
+    },
+    "number": {
+      "integer": "Somente números inteiros",
+      "max": "Ainda não inventamos a máquina do tempo, haha"
+    },
+    "devExp": {
+      "min": "Programava em cartão? O mínimo é 1982 :)"
+    },
+    "blockchainExp": {
+      "min": "Satoshi, é você? O mínimo é 2008 :)"
+    }
+  },
+  "messages": {
+    "registration_success": "Registrado com sucesso!",
+    "email_in_use": "Este email já está em uso!",
+    "something_wrong_try_again": "Algo deu errado, tente novamente!",
+    "login_success": "Você entrou com sucesso!",
+    "invalid_credentials_try_again": "Credenciais inválidas, tente novamente.",
+    "something_wrong_happened": "Algo de errado aconteceu.",
+    "logout_success": "Você saiu!",
+    "lesson_no_response": "Você não pode enviar a lição sem resposta :)",
+    "file_needed": "Você precisa selecionar um arquivo para enviar",
+    "email_sent_success": "Email enviado com sucesso",
+    "email_not_found": "Email não encontrado",
+    "lesson_completed_congrats": "Você terminou, parabéns!",
+    "exercise_not_submitted": "Você ainda não enviou o exercício desta lição",
+    "already_on_first_lesson": "Você já está na primeira lição.",
+    "data_updated_success": "Dados atualizados com sucesso!",
+    "error_updating_data": "Erro ao atualizar dados",
+    "language_not_available": "Conteúdo não disponível para o idioma selecionado. Usando o idioma padrão.",
+    "course_registration_success": "Registrado no curso com sucesso!",
+    "login_cancelled": "Login cancelado"
+  },
+  "twitter-share": "Networking é tudo, que tal compartilhar seu progresso com os seus amigos no Twitter?",
+  "link_github_account": "Deseja vincular o github à sua conta já cadastrada?",
+  "buttons": {
+    "study_groups": "Grupos de Estudo",
+    "no": "Não",
+    "yes": "Sim",
+    "reset_password": "Resete sua senha",
+    "sign_in": "Entre na sua conta",
+    "register_now": "Registre-se agora!",
+    "forgot_password": "Esqueci minha senha",
+    "log_in": "Entrar",
+    "recover_password": "Recuperar senha",
+    "login_with_github": "Login com o Github",
+    "login_with_google": "Login com o Google",
+    "register": "Registre-se"
+  },
+  "form": {
+    "no_account": "Não tem uma conta?",
+    "enter_name": "Por favor, insira seu nome",
+    "name": "Nome Completo",
+    "enter_email": "Por favor, insira seu e-mail",
+    "invalid_email": "E-mail inválido",
+    "password": "Senha",
+    "confirm_password": "Confirmar Senha",
+    "password_mismatch": "As senhas não coincidem",
+    "enter_password": "Por favor, insira sua senha",
+    "verify_password": "Verifique sua senha",
+    "or": "OU",
+    "already_have_account": "Já tem uma conta?"
+  },
+  "peopleBuilding": "pessoas construindo nessa seção",
+  "createStudyGroup": "Criar Grupo de Estudo",
+  "description": "Descrição",
+  "difficulty": "Dificuldade",
+  "beginner": "Iniciante",
+  "intermediate": "Intermediário",
+  "advanced": "Avançado",
+  "language": "Idioma",
+  "scheduledAt": "Agendado Para",
+  "leaderDiscordId": "ID do Discord do Líder",
+  "imageUrl": "URL da Imagem",
+  "index": "Índice",
+  "searchBuild": "Pesquisar por título"
+}
