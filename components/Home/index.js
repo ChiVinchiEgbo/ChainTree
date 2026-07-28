@@ -17,7 +17,7 @@ export default function Main({ course }) {
         <div>
           <div className="m-auto max-w-lg">
             <Text h2 auto="true" className="mb-4 text-center font-bold">
-              <RenderField field={course} fieldName="title" />
+              <RenderField object={course} field="title" />
             </Text>
           </div>
           <div className="mb-7 flex justify-center text-justify">
