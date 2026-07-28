@@ -2,23 +2,6 @@ import Head from 'next/head'
 
 /**
  * SEOHead - Reusable SEO component for Next.js pages
- *
- * @param {string} title - Page title (branding suffix added automatically)
- * @param {string} description - Meta description (150-160 chars recommended)
- * @param {string} [canonical] - Relative path for canonical URL (e.g., "/courses/solidity")
- * @param {string[]} [keywords] - Array of keywords
- * @param {'website'|'article'|'profile'} [ogType] - Open Graph type
- * @param {string} [ogImage] - Absolute URL to OG image (1200x630px recommended)
- * @param {string} [ogImageAlt] - Alt text for OG image
- * @param {number} [ogImageWidth] - OG image width (default: 1200)
- * @param {number} [ogImageHeight] - OG image height (default: 630)
- * @param {'summary'|'summary_large_image'} [twitterCard] - Twitter card type
- * @param {string} [twitterSite] - Twitter handle for the site
- * @param {string} [twitterCreator] - Twitter handle for content creator
- * @param {object|object[]} [jsonLd] - JSON-LD structured data (single or array)
- * @param {boolean} [noindex] - Prevent search engine indexing
- * @param {boolean} [nofollow] - Prevent following links
- * @param {string} [locale] - Content locale (default: 'pt-BR')
  */
 export default function SEOHead({
   title,
@@ -71,7 +54,7 @@ export default function SEOHead({
       <meta property="og:type" content={ogType} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={safeDescription} />
       <meta property="og:site_name" content="ChainTree" />
       <meta property="og:locale" content={locale} />
       {ogImage && (
@@ -88,7 +71,7 @@ export default function SEOHead({
       <meta property="twitter:card" content={twitterCard} />
       {canonicalUrl && <meta property="twitter:url" content={canonicalUrl} />}
       <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={description} />
+      <meta property="twitter:description" content={safeDescription} />
       {ogImage && <meta property="twitter:image" content={ogImage} />}
       {twitterSite && <meta property="twitter:site" content={twitterSite} />}
       {twitterCreator && <meta property="twitter:creator" content={twitterCreator} />}
