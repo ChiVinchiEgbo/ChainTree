@@ -1,12 +1,8 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp, getApps, getApp } from 'firebase/app'
-import { getAuth, connectAuthEmulator } from 'firebase/auth'
-import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore'
-import { getStorage, connectStorageEmulator } from 'firebase/storage'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+const { initializeApp, getApps, getApp } = require('firebase/app')
+const { getAuth, connectAuthEmulator } = require('firebase/auth')
+const { getFirestore, connectFirestoreEmulator } = require('firebase/firestore')
+const { getStorage, connectStorageEmulator } = require('firebase/storage')
 
-// Your web app's Firebase configuration
 let firebaseConfig
 
 if (process.env.NODE_ENV === 'test') {
@@ -54,6 +50,5 @@ async function startEmulators() {
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
   startEmulators().catch(console.error)
 }
-// const analytics = getAnalytics(app);
 
-export { auth, app, db, storage }
+module.exports = { auth, app, db, storage }

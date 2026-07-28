@@ -44,7 +44,9 @@ export default function SEOHead({
   const canonicalUrl = canonical ? `${siteUrl}${canonical}` : undefined
 
   // Auto-append branding if not already present
-  const fullTitle = title && title.includes('ChainTree') ? title : `${title} | ChainTree`
+  const fullTitle = typeof title === 'string' && title.trim() ? (title.includes('ChainTree') ? title : `${title} | ChainTree`) : 'ChainTree - Learn Web3 & Solana Development'
+  const safeDescription = typeof description === 'string' ? description : (description ? String(description) : '')
+  const safeKeywords = Array.isArray(keywords) ? keywords : []
 
   // Robots directive (only emit tag when restricting)
   const robotsContent =
@@ -57,8 +59,8 @@ export default function SEOHead({
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
-      <meta name="description" content={description} />
-      {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+      <meta name="description" content={safeDescription} />
+      {safeKeywords.length > 0 && <meta name="keywords" content={safeKeywords.join(', ')} />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
