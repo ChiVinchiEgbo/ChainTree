@@ -21,6 +21,28 @@ import 'react-toastify/dist/ReactToastify.css'
 import { mixpanel } from '../lib/utils/mixpanel'
 import '../i18n'
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('App ErrorBoundary caught error:', error, errorInfo)
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || null
+    }
+    return this.props.children
+  }
+}
+
 export const event = (event_name, props) => {
   if (typeof window !== 'undefined' && mixpanel && typeof mixpanel.track === 'function') {
     mixpanel.track(event_name, props)
@@ -46,20 +68,21 @@ function MyApp({ Component, pageProps }) {
         i18n.changeLanguage(lang)
       }
     }
-  }, [router.query.lang]) // Depend on router.query.lang to react to changes
+  }, [router?.query?.lang])
 
   useEffect(() => {
     const handleRouteChange = (url) => {
       event('Page view', { url })
     }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
+    if (router?.events?.on) {
+      router.events.on('routeChangeComplete', handleRouteChange)
     }
-  }, [router.events])
-
-  const cookieText =
-    'Ao clicar em aceitar, você consente com o uso dos cookies que você proveu em nosso website, para fornecer uma melhor experiência de usuário.'
+    return () => {
+      if (router?.events?.off) {
+        router.events.off('routeChangeComplete', handleRouteChange)
+      }
+    }
+  }, [router?.events])
 
   const lightTheme = createTheme({
     type: 'light',
@@ -102,14 +125,16 @@ function MyApp({ Component, pageProps }) {
             <ConnectionProvider endpoint={endpoint}>
               <WalletProvider wallets={wallets} autoConnect>
                 <WalletModalProvider>
-                  <SessionProvider session={pageProps.session}>
+                  <SessionProvider session={pageProps?.session}>
                     <Head>
                       <title>{t('createFirstProject')}</title>
                       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                       <link rel="icon" href="/assets/img/w3d-logo-symbol-ac.svg" />
                     </Head>
                     <NavbarComponent />
-                    <Component {...pageProps} />
+                    <ErrorBoundary>
+                      <Component {...pageProps} />
+                    </ErrorBoundary>
                     <Footer />
                     <ToastContainer />
                   </SessionProvider>
