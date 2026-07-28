@@ -333,9 +333,16 @@ function Lessons({ course, section, lesson, content, currentDate }) {
   )
 }
 
-export async function getServerSideProps({ params, query }) {
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  }
+}
+
+export async function getStaticProps({ params }) {
   try {
-    const lang = query?.lang || 'en'
+    const lang = 'pt-BR'
     const course = await getCourse(params.id)
     const content = await getPage(params.id, params.section, params.lesson, lang)
     const currentDate = new Date().toISOString()
@@ -349,9 +356,10 @@ export async function getServerSideProps({ params, query }) {
         content: content || '',
         currentDate,
       },
+      revalidate: 60,
     }
   } catch (error) {
-    console.error('Error in getServerSideProps (courses/[id]/[section]/[lesson].js):', error)
+    console.error('Error in getStaticProps (courses/[id]/[section]/[lesson].js):', error)
     return {
       props: {
         course: JSON.parse(JSON.stringify({ id: params.id, ...defaultCourse })),
@@ -360,6 +368,7 @@ export async function getServerSideProps({ params, query }) {
         content: '',
         currentDate: new Date().toISOString(),
       },
+      revalidate: 60,
     }
   }
 }
