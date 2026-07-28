@@ -31,8 +31,8 @@ const queryParameterLangDetector = {
   },
 }
 
-import ptBR from './public/locales/pt-BR/translation.json'
-import en from './public/locales/en/translation.json'
+const ptBR = require('./public/locales/pt-BR/translation.json')
+const en = require('./public/locales/en/translation.json')
 
 const resource = {
   en: {

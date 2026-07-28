@@ -109,7 +109,7 @@ export default function NavbarComponent() {
               flexDirection: 'column',
             }}
           >
-            {i18n.options.whitelist
+            {(i18n.options.whitelist || i18n.options.supportedLngs || ['en', 'pt-BR'])
               .filter((l) => l !== i18n.resolvedLanguage)
               .map((l) => (
                 <Dropdown.Item>
