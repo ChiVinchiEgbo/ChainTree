@@ -139,6 +139,7 @@ function Lessons({ course, section, lesson, content, currentDate }) {
   }
 
   const fixMarkdown = (markdown) => {
+    if (!markdown || typeof markdown !== 'string') return ''
     let result = markdown.replace(
       /\[Loom]\(+[a-z]+:\/\/[a-z]+[.][a-z]+[.][a-z]+\/[a-z]+\/(\w+)\)/,
       '<a href="https://www.loom.com/share/$1" target="_blank"><img className="w-2/3"  src="https://cdn.loom.com/sessions/thumbnails/$1-with-play.gif" /></a>'
@@ -204,7 +205,7 @@ function Lessons({ course, section, lesson, content, currentDate }) {
         <meta property="og:title" content={`Lesson - ${lesson}`} />
         <meta property="og:image" content={course?.resized_img_url || course.image_url} />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:alt" content={`${course.title} `} />
+        <meta property="og:image:alt" content={`${course?.title || 'ChainTree Course'} `} />
         <meta property="og:image:width" content="256" />
         <meta property="og:image:height" content="256" />
         <title>Lição - {lesson} - ChainTree</title>
