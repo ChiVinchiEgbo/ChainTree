@@ -51,19 +51,25 @@ function Lessons({ course, section, lesson, content, currentDate }) {
     }
   }, [language])
 
-  useEffect(async () => {
-    if (auth.currentUser) {
-      const userSession = await getUserFromFirestore(auth.currentUser)
-      setUser(userSession)
+  useEffect(() => {
+    async function fetchUser() {
+      if (auth?.currentUser) {
+        const userSession = await getUserFromFirestore(auth.currentUser)
+        setUser(userSession)
+      }
     }
-  }, [auth.currentUser])
+    fetchUser()
+  }, [auth?.currentUser])
 
-  useEffect(async () => {
-    setCohorts(await getAllCohorts())
-    getSubmissionData()
+  useEffect(() => {
+    async function initCohorts() {
+      setCohorts(await getAllCohorts())
+      getSubmissionData()
+    }
+    initCohorts()
   }, [lesson, language])
 
-  useEffect(async () => {
+  useEffect(() => {
     if (cohorts) {
       setCohort(getCurrentCohort(user, cohorts, course, currentDate))
     }
@@ -101,16 +107,17 @@ function Lessons({ course, section, lesson, content, currentDate }) {
     if (!course) return []
 
     const sections = course?.metadata?.[language]?.sections || course?.sections
-    if (!sections) return []
+    if (!sections || typeof sections !== 'object') return []
 
     const sortedSectionKeys = Object.keys(sections).sort()
 
     let lessons = sortedSectionKeys
       .map((section) => {
-        const sortedLessons = sections[section].sort((a, b) => a.file.localeCompare(b.file))
+        if (!Array.isArray(sections[section])) return []
+        const sortedLessons = [...sections[section]].sort((a, b) => (a?.file || '').localeCompare(b?.file || ''))
         return sortedLessons.map((lesson) => ({
           section,
-          lesson: lesson.file,
+          lesson: lesson?.file,
         }))
       })
       .flat()
