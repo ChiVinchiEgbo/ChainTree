@@ -4,7 +4,6 @@ import { useConnection, useWallet } from '@solana/wallet-adapter-react'
 import { LAMPORTS_PER_SOL, Transaction } from '@solana/web3.js'
 import { toast } from 'react-toastify'
 import {
-  FiWallet,
   FiCopy,
   FiCheck,
   FiExternalLink,
@@ -19,7 +18,7 @@ import {
   FiGift,
   FiAlertCircle
 } from 'react-icons/fi'
-import { FaCoins, FaFire } from 'react-icons/fa'
+import { FaCoins, FaFire, FaWallet } from 'react-icons/fa'
 import {
   getVaultPda,
   getStakeAccountPda,
@@ -507,7 +506,7 @@ export default function StakingDashboard() {
             {!connected ? (
               <div className="rounded-xl sm:rounded-2xl border-2 border-dashed border-gray-300 bg-white p-5 text-center shadow-sm">
                 <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gray-50">
-                  <FiWallet className="h-5 w-5 text-gray-400" />
+                  <FaWallet className="h-5 w-5 text-gray-400" />
                 </div>
                 <h2 className="mb-1 text-base font-semibold text-black">Connect Solana Wallet</h2>
                 <p className="mb-3 text-xs leading-relaxed text-gray-600">
