@@ -6,6 +6,7 @@ skip-lint = false
 
 [programs.devnet]
 bootcamp_certificates = "BYiTyWDcTk5Be4AQkxoYQhh6TQsrZSJKuePHrfJYDNSm"
+chaintree_staking = "11111111111111111111111111111111"
 
 [provider]
 cluster = "devnet"

@@ -27,6 +27,10 @@ export default function NavbarComponent() {
       href: '/courses',
     },
     {
+      name: 'Staking',
+      href: '/staking',
+    },
+    {
       name: 'Study Groups',
       href: '/study-groups',
     },
@@ -76,6 +80,16 @@ export default function NavbarComponent() {
               icon={<TbCurrencySolana color="black" size={18} />}
             >
               <Text weight={'extrabold'} css={{ color: 'black' }}>Builds</Text>
+            </Button>
+          </Link>
+          <Link href="/staking">
+            <Button
+              auto="true"
+              rounded
+              css={{ background: '$white' }}
+              icon={<TbCurrencySolana color="black" size={18} />}
+            >
+              <Text weight={'extrabold'} css={{ color: 'black' }}>Staking</Text>
             </Button>
           </Link>
           <Link href="/study-groups">

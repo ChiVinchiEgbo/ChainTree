@@ -1,6 +1,7 @@
 [workspace]
 members = [
-    "programs/*"
+    "programs/bootcamp_certificates",
+    "programs/chaintree_staking",
 ]
 resolver = "2"
 
