@@ -348,7 +348,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const lang = 'pt-BR'
+    const lang = 'en'
     const course = await getCourse(params.id)
     const content = await getPage(params.id, params.section, params.lesson, lang)
     const currentDate = new Date().toISOString()

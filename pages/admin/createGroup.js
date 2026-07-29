@@ -112,10 +112,7 @@ function CreateStudyGroup({ user }) {
               required
               className="w-full rounded border p-2"
             >
-              <option value="">{t('selectLanguage')}</option>
               <option value="en">English</option>
-              <option value="pt-BR">Português</option>
-              <option value="es">Español</option>
             </select>
           </div>
           <div>

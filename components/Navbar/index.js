@@ -98,28 +98,7 @@ export default function NavbarComponent() {
             </Button>
           </Link>
         </Navbar.Content>
-        <Dropdown>
-          <Dropdown.Button size="xs" light rounded flat css={{ paddingBlock: '$10' }}>
-            {i18n.resolvedLanguage || 'en'}
-          </Dropdown.Button>
-          <Dropdown.Menu
-            css={{
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: 'column',
-            }}
-          >
-            {(i18n.options.whitelist || i18n.options.supportedLngs || ['en', 'pt-BR'])
-              .filter((l) => l !== i18n.resolvedLanguage)
-              .map((l) => (
-                <Dropdown.Item>
-                  <Link href={'?lang=' + l}>
-                    <Text weight={'bold'}>{l}</Text>
-                  </Link>
-                </Dropdown.Item>
-              ))}
-          </Dropdown.Menu>
-        </Dropdown>
+
 
         <Navbar.Content>
           {user?.uid && (
