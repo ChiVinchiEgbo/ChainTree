@@ -1,0 +1,6 @@
+{
+  "name": "ChainTree",
+  "description": "Open-source Web3 developer learning platform and on-chain credentialing engine built on Solana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

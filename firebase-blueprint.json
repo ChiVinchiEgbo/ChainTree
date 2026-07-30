@@ -1,0 +1,75 @@
+{
+  "entities": {
+    "users": {
+      "path": "users/{uid}",
+      "schema": {
+        "uid": "string",
+        "email": "string",
+        "name": "string",
+        "wallet": "string",
+        "role": "string",
+        "company": "string",
+        "bio": "string",
+        "github": "string",
+        "twitter": "string",
+        "linkedin": "string",
+        "points": "number",
+        "streakDays": "number",
+        "skills": "array",
+        "badges": "array",
+        "certificates": "array",
+        "progress": "map"
+      }
+    },
+    "courses": {
+      "path": "courses/{id}",
+      "schema": {
+        "id": "string",
+        "title": "string",
+        "description": "string",
+        "level": "string",
+        "duration": "string",
+        "tags": "array",
+        "instructor": "map",
+        "certificateMintable": "boolean",
+        "sections": "array"
+      }
+    },
+    "cohorts": {
+      "path": "cohorts/{id}",
+      "schema": {
+        "id": "string",
+        "title": "string",
+        "startDate": "string",
+        "capacity": "number",
+        "enrolledCount": "number"
+      }
+    },
+    "study_groups": {
+      "path": "study_groups/{id}",
+      "schema": {
+        "id": "string",
+        "name": "string",
+        "slug": "string",
+        "description": "string",
+        "discordUrl": "string",
+        "scheduled_at": "string",
+        "index": "number",
+        "members": "array"
+      }
+    },
+    "certificates": {
+      "path": "certificates/{id}",
+      "schema": {
+        "id": "string",
+        "courseId": "string",
+        "courseTitle": "string",
+        "studentUid": "string",
+        "studentName": "string",
+        "mintAddress": "string",
+        "issueDate": "string",
+        "metadataUri": "string"
+      }
+    }
+  }
+}

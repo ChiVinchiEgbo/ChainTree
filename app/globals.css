@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas: #c5c3d1;
+    --surface: #f5f4f0;
+    --background: #f5f4f0;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --primary: #10b981;
+    --primary-foreground: #ffffff;
+    --secondary: #f3f4f6;
+    --secondary-foreground: #111827;
+    --muted: #f3f4f6;
+    --muted-foreground: #6b7280;
+    --accent: #f3f4f6;
+    --accent-foreground: #111827;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #10b981;
+    --radius: 0.875rem;
+
+    --emerald-accent: #10b981;
+    --amber-accent: #f59e0b;
+  }
+
+  .dark {
+    --canvas: #1e1b2e;
+    --surface: #121318;
+    --background: #121318;
+    --foreground: #f9fafb;
+    --card: #1a1c23;
+    --card-foreground: #f9fafb;
+    --popover: #1a1c23;
+    --popover-foreground: #f9fafb;
+    --primary: #10b981;
+    --primary-foreground: #ffffff;
+    --secondary: #272a34;
+    --secondary-foreground: #f9fafb;
+    --muted: #272a34;
+    --muted-foreground: #9ca3af;
+    --accent: #272a34;
+    --accent-foreground: #f9fafb;
+    --border: #2e323e;
+    --input: #2e323e;
+    --ring: #10b981;
+  }
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Custom scrollbar for lesson viewer and tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Wallet Adapter Custom UI Styles */
+.wallet-adapter-button {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  height: 36px !important;
+  line-height: 1 !important;
+  padding: 0 16px !important;
+  border-radius: 9999px !important;
+  font-size: 0.8125rem !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.wallet-adapter-button *,
+.wallet-adapter-button-trigger * {
+  white-space: nowrap !important;
+}
+
+.wallet-adapter-button:hover {
+  background-color: #059669 !important;
+}
+

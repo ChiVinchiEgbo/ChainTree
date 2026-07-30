@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users Collection
+    match /users/{uid} {
+      allow read: if true;
+      allow create, update: if isOwner(uid);
+      allow delete: if false;
+    }
+
+    // Courses Collection (Public read, admin write)
+    match /courses/{id} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // Cohorts Collection
+    match /cohorts/{id} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // Study Groups Collection
+    match /study_groups/{id} {
+      allow read: if true;
+      allow create, update: if isAuthenticated();
+      allow delete: if false;
+    }
+
+    // Certificates Collection (Public read for verifier)
+    match /certificates/{id} {
+      allow read: if true;
+      allow create, update: if isAuthenticated();
+      allow delete: if false;
+    }
+  }
+}
