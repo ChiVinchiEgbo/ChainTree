@@ -1,18 +1,10 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { AppProviders } from '@/components/providers/AppProviders';
 import { AppShell } from '@/components/learn/app-shell';
 
-const geistSans = Geist({
-  variable: '--font-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-mono',
-  subsets: ['latin'],
-});
+const geistSans = { variable: 'font-sans' };
+const geistMono = { variable: 'font-mono' };
 
 export const metadata: Metadata = {
   title: 'ChainTree | Open-Source Web3 Developer Learning & Solana Credentials',
